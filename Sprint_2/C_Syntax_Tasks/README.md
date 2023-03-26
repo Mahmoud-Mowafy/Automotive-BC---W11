@@ -10,8 +10,7 @@ Implement and draw your board
           - Use this prototype void updateBoard (uint8_t *board, uint8_t position, uint8_t value);
           - This function will take the board, position to update and value to set in this position
 What to Deliver
-            - Use this prototype void updateBoard (uint8_t *board, uint8_t position, uint8_t value);
-            - This function will take the board, position to update and value to set in this position
+
             Deliver these two functions as requested and without changing in their prototypes
             
 Implement Players Config
@@ -55,17 +54,17 @@ Deliver the main function
 
 Test your main flow
 
-1. Test the main flow against wrong symbol choice
-2. Test the main flow against repeated sumbole choice
-3. Test the main flow against X player winning:
-- All Rows winning (3)
-- All Columns winning (3)
-- All Diagonals winning (2)
-4. Test the main flow against O player winning: 
-- All Rows winning (3) 
-- All Columns winning (3) 
-- All Diagonals winning (2)
-5. Test the main flow against X player draw case at leaset three draw cases
+          1. Test the main flow against wrong symbol choice
+          2. Test the main flow against repeated sumbole choice
+          3. Test the main flow against X player winning:
+          - All Rows winning (3)
+          - All Columns winning (3)
+          - All Diagonals winning (2)
+          4. Test the main flow against O player winning: 
+          - All Rows winning (3) 
+          - All Columns winning (3) 
+          - All Diagonals winning (2)
+          5. Test the main flow against X player draw case at leaset three draw cases
 
 - Deliver all your code files
 - Deliver a video showing your execution for the test cases (video/test case)
