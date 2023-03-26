@@ -7,6 +7,8 @@ Implement and draw your board
           - Use this prototype void drawBoard(uint8_t *board);
           - This function will take a board as an input and prints it on the console
           2. Implement update board function
+          - Use this prototype void updateBoard (uint8_t *board, uint8_t position, uint8_t value);
+          - This function will take the board, position to update and value to set in this position
 What to Deliver
             - Use this prototype void updateBoard (uint8_t *board, uint8_t position, uint8_t value);
             - This function will take the board, position to update and value to set in this position
