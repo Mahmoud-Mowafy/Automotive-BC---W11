@@ -1,6 +1,6 @@
 X-O Game
-htt
-![x-0-game-17561907](https://user-images.githubusercontent.com/60091384/228657473-b804b9ea-fb5f-448e-b7a1-b841293b5f16.jpg)
+
+![dd188cde6560c1ab5d30994da3c139c2--pictures-of-plays](https://user-images.githubusercontent.com/60091384/228658391-89001683-b82d-4611-8574-8507fc0aee34.jpg)
 
 
  draw the board
