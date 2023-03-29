@@ -3,7 +3,7 @@ htt
 ![x-0-game-17561907](https://user-images.githubusercontent.com/60091384/228657473-b804b9ea-fb5f-448e-b7a1-b841293b5f16.jpg)
 
 
-Implement and draw your board
+ draw the board
 
           1. A board will be initialized with numbers from 1 to 9, which state each position number
           2. Implement draw board function
@@ -12,11 +12,9 @@ Implement and draw your board
           2. Implement update board function
           - Use this prototype void updateBoard (uint8_t *board, uint8_t position, uint8_t value);
           - This function will take the board, position to update and value to set in this position
-What to Deliver
 
-            Deliver these two functions as requested and without changing in their prototypes
             
-Implement Players Config
+ Players Configurations
 
           1. Only two players (Player 1 abd Player 2)
           2. Implement get player symbol function
@@ -27,18 +25,13 @@ Implement Players Config
           3. Implement set player config function
           - Use this prototype, void setPlayerConfig(uint8_t *configArray);
           - This function will prompt and asks each user about their preferred symbols and saves it in the configArray
-
-Deliver these two functions as requested and without changing in their prototypes
-
-Implement selected player move
+player move
 
           1. Implement load and update function
           - Use this prototype, void loadAndUpdate(uint8_t playerNumber);
           - This function will take player's number then load his config, asks him for the position then updates the board
 
-Deliver this function as requested and without changing its prototype
-
-Implement winning condition check
+winning condition check
 
           1. Implement a function to check if there is a winning, draw, or continue playing.
           - Use this prototype, void getGameState(uint8_t *gameState, );
@@ -46,14 +39,9 @@ Implement winning condition check
           - Returns 0 for winning
           - Returns 1 for draw
           - Returns 2 for continue
-
-Deliver this function as requested and without changing its prototype
-
-Implement the main flow
+ main flow
 
           1. Implement the main flow acccording to your understanding of the game
-
-Deliver the main function
 
 Test your main flow
 
@@ -68,8 +56,5 @@ Test your main flow
           - All Columns winning (3) 
           - All Diagonals winning (2)
           5. Test the main flow against X player draw case at leaset three draw cases
-
-- Deliver all your code files
-- Deliver a video showing your execution for the test cases (video/test case)
 
             
