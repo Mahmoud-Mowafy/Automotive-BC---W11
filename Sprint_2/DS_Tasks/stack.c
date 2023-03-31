@@ -21,14 +21,11 @@
  * Initialize the top with -1
  *
  *
- * PRE-CONDITION:
- * PRE-CONDITION:
- * PRE-CONDITION:
- * PRE-CONDITION:
- * POST-CONDITION:
+ * PRE-CONDITION:   creat object from the ST_stack_t structure
+ * POST-CONDITION:  stack is created, and its elements are intialized by 0
  *
- * @param [in]		cardData is a pointer to the ST_cardData_t structure that holding data
- * 					about the card, such as cardHolderName, primaryAccountNumber, cardExpirationDate.
+ * @param [in]		stack is a pointer to the ST_stack_t structure that holding data
+ * 					about the stack, such as top, elements.
  *
  * @return 			void.
  * \b Example:
@@ -36,7 +33,6 @@
  *  createEmptyStack(ST_stack_t *stack);
  * @endcode
  *
- * @see getCardHolderNameTest()
  *
  ******************************************************************************************************************************************/
 void createEmptyStack(ST_stack_t *stack)
@@ -62,33 +58,28 @@ void deleteStack(ST_stack_t *stack)
  *//**
  * Description:
  *
- * This function is used to test the getHolderName() function, to validate the card data.
- *
- * PRE-CONDITION:
- * PRE-CONDITION:
- * PRE-CONDITION:
- * PRE-CONDITION:
- * POST-CONDITION:
- *
- * @param [in]		cardData is a pointer to the ST_cardData_t structure that holding data
- * 					about the card, such as cardHolderName, primaryAccountNumber, cardExpirationDate.
- *
- * @return 			EN_cardError_t is a enumeration that contains module errors.
- * \b Example:
- * @code
- * uint8_t var = getCardHolderName();
- * @endcode
- *
- * @see getCardHolderNameTest()
- *
- ************************************************************************************************************/
-
-/* Description:
  * - This function takes a reference to the stack and data to store
  * - Stores the data passed into the stack
  * Return:
  * - returns -1 if the stack is full
  * - returns 0 otherwise
+ *
+ * PRE-CONDITION:   stack element into the stack
+ *
+ * @param [in]	  - stack is a pointer to the ST_stack_t structure that holding data
+ * 					about the stack, such as top, elements.
+ *                - data is a uint8_t variable.
+ *
+ * @return 			int8_t is a signed character, will reflect the error.
+ * \b Example:
+ * @code
+ * int8_t var = push(ST_stack_t *stack, uint8_t data);
+ * @endcode
+ *
+ ************************************************************************************************************/
+
+/* Description:
+
  */
  int8_t push(ST_stack_t *stack, uint8_t data)
  {
@@ -102,38 +93,34 @@ void deleteStack(ST_stack_t *stack)
 
  }
  /************************************************************************************************************
-  * Function : getCardHolderName()
+  * Function : pop()
   *//**
   * Description:
   *
-  * This function is used to test the getHolderName() function, to validate the card data.
-  *
-  * PRE-CONDITION:
-  * PRE-CONDITION:
-  * PRE-CONDITION:
-  * PRE-CONDITION:
-  * POST-CONDITION:  Deleting an element from the stack.
-  *
-  * @param [in]		cardData is a pointer to the ST_cardData_t structure that holding data
-  * 					about the card, such as cardHolderName, primaryAccountNumber, cardExpirationDate.
-  *
-  * @return 			EN_cardError_t is a enumeration that contains module errors.
-  * \b Example:
-  * @code
-  * uint8_t var = getCardHolderName();
-  * @endcode
-  *
-  * @see getCardHolderNameTest()
-  *
-  ************************************************************************************************************/
-
- /* Description:
   * - This function takes a reference to the stack
   * - Stores the data popped from the stack in a data variable
   * Return:
   * - returns -2 if the stack is empty
   * - returns 0 otherwise
-  */
+  *
+  *
+  * PRE-CONDITION:   stack is intialized and not empty
+  * POST-CONDITION:  Deleting an element from the stack.
+  *
+  * @param [in]	  - stack is a pointer to the ST_stack_t structure that holding data
+  * 					about the stack, such as top, elements.
+  *                - data is a pointert to a uint8_t variable.
+  *
+  * @return 			int8_t is a signed character, will reflect the error.
+  * \b Example:
+  * @code
+  * int8_t var =  pop(ST_stack_t *stack, uint8_t *data)
+  * @endcode
+  *
+  *
+  ************************************************************************************************************/
+
+
   int8_t pop(ST_stack_t *stack, uint8_t *data)
   {
 	  if( stack->top == -1)
@@ -157,19 +144,14 @@ void deleteStack(ST_stack_t *stack)
    * - returns 0 otherwise
    *
    *
-   * PRE-CONDITION:
-   * PRE-CONDITION:
-   * PRE-CONDITION:
-   * PRE-CONDITION:
-   * POST-CONDITION:
+   *  PRE-CONDITION:   stack is intialized and not empty
+   * POST-CONDITION:   Printing the elemente from the stack.
    *
-   * @param [in]		stack is a pointer to the ST_cardData_t structure that holding data
-   * 					about the card, such as cardHolderName, primaryAccountNumber, cardExpirationDate.
-   *
-   * @return 			EN_cardError_t is a enumeration that contains module errors.
+   * @param [in]	  - stack is a pointer to the ST_stack_t structure that holding data
+   * 					about the stack, such as top, elements.
    * \b Example:
    * @code
-   * uint8_t var = printStack();
+   * int8_t var = printStack(ST_stack_t *stack);
    * @endcode
    *
    ************************************************************************************************************/
@@ -190,36 +172,25 @@ void deleteStack(ST_stack_t *stack)
    * Function : getCardHolderName()
    *//**
    * Description:
+   * - This function takes a reference to the stack
+   * - Stores its top data into a variable
+   * Return:
+   * - returns -2 if the stack is empty
+   * - 0 otherwise
    *
-   * This function is used to test the getHolderName() function, to validate the card data.
+   * PRE-CONDITION:   stack is intialized and not empty
+   * POST-CONDITION:  return the first element from the stack.
    *
-   * PRE-CONDITION:
-   * PRE-CONDITION:
-   * PRE-CONDITION:
-   * PRE-CONDITION:
-   * POST-CONDITION:
-   *
-   * @param [in]		cardData is a pointer to the ST_cardData_t structure that holding data
-   * 					about the card, such as cardHolderName, primaryAccountNumber, cardExpirationDate.
-   *
-   * @return 			EN_cardError_t is a enumeration that contains module errors.
+   * @param [in]	  - stack is a pointer to the ST_stack_t structure that holding data
+   * 					about the stack, such as top, elements.
+   *                  - topData is a pointer to a uint8_t variable.
    * \b Example:
    * @code
-   * uint8_t var = getCardHolderName();
+   * int8_t var = getStackTop(ST_stack_t *stack, uint8_t *topData);
    * @endcode
-   *
-   * @see getCardHolderNameTest()
    *
    ************************************************************************************************************/
 
-
- /* Description:
-  * - This function takes a reference to the stack
-  * - Stores its top data into a variable
-  * Return:
-  * - returns -2 if the stack is empty
-  * - 0 otherwise
-  */
  int8_t getStackTop(ST_stack_t *stack, uint8_t *topData)
  {
 	  if( stack->top == -1)
@@ -231,31 +202,6 @@ void deleteStack(ST_stack_t *stack)
 	  }
  }
 
- /************************************************************************************************************
-  * Function : getCardHolderName()
-  *//**
-  * Description:
-  *
-  * This function is used to test the getHolderName() function, to validate the card data.
-  *
-  * PRE-CONDITION:
-  * PRE-CONDITION:
-  * PRE-CONDITION:
-  * PRE-CONDITION:
-  * POST-CONDITION:
-  *
-  * @param [in]		cardData is a pointer to the ST_cardData_t structure that holding data
-  * 					about the card, such as cardHolderName, primaryAccountNumber, cardExpirationDate.
-  *
-  * @return 			EN_cardError_t is a enumeration that contains module errors.
-  * \b Example:
-  * @code
-  * uint8_t var = getCardHolderName();
-  * @endcode
-  *
-  * @see getCardHolderNameTest()
-  *
-  ************************************************************************************************************/
 
 
  /* Description:
@@ -273,32 +219,6 @@ void deleteStack(ST_stack_t *stack)
 		  return 0;
  }
 
- /************************************************************************************************************
-  * Function : getCardHolderName()
-  *//**
-  * Description:
-  *
-  * This function is used to test the getHolderName() function, to validate the card data.
-  *
-  * PRE-CONDITION:
-  * PRE-CONDITION:
-  * PRE-CONDITION:
-  * PRE-CONDITION:
-  * POST-CONDITION:
-  *
-  * @param [in]		cardData is a pointer to the ST_cardData_t structure that holding data
-  * 					about the card, such as cardHolderName, primaryAccountNumber, cardExpirationDate.
-  *
-  * @return 			EN_cardError_t is a enumeration that contains module errors.
-  * \b Example:
-  * @code
-  * uint8_t var = getCardHolderName();
-  * @endcode
-  *
-  * @see getCardHolderNameTest()
-  *
-  ************************************************************************************************************/
-
  /* Description:
   * - This function takes a reference to the stack
   * - Checks if the stack is empty or not
@@ -314,7 +234,7 @@ void deleteStack(ST_stack_t *stack)
 		  return 0;
  }
 
-
+ /*************  Stack_Test  **************************************************/
 
  void stackTestFunction(ST_stack_t *stack)
  {

@@ -1,9 +1,34 @@
 /*
- * isBalanced.c
+ * stack.cc
  *
- *  Created on: Mar 31, 2023
- *      Author: Mahmoud
+ *  Created on: Mar 27, 2023
+ *      Author: Mahmoud Mowafey
+ *      Sprint_Number : 2
+ *      Module_Name : Data_Structures
+ *      Task_Name : Balanced
  */
+
+ /************************************************************************************************************
+  * Function : isBalancedParanthethes()
+  *//**
+  * Description:
+  *
+  * This function is used to check the pranthethes balance
+  *
+  *
+  * PRE-CONDITION:   the expression is entered by the user.
+  * POST-CONDITION:  store the pranthethes inside a stack and check its balance.
+  *
+  * @param [in]		expression is a pointer to the string that holding the expression.
+  *
+  * @return 			int8_t.
+  * \b Example:
+  * @code
+  * int8_t var = isBalancedParanthethes(uint8_t *expression)';;
+  * @endcode
+  *
+  ******************************************************************************************************************************************/
+
 #include"isBalanced.h"
 
 int8_t isBalancedParanthethes(uint8_t *expression)
@@ -84,6 +109,7 @@ int8_t isBalancedParanthethes(uint8_t *expression)
 		return -1;
 }
 
+/********************  isBalanced function test  *******************************************************/
 void isBalancedParanthethesTest()
 {
 
