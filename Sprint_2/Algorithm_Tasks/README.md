@@ -1,3 +1,5 @@
+![LCS](https://user-images.githubusercontent.com/60091384/228991388-58c17eda-6e1a-4835-b2df-9bb9953f1f06.jpg)
+
 Longest Consecutive Subsequence
 
 
