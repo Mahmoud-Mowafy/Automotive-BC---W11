@@ -54,7 +54,7 @@ void deleteStack(ST_stack_t *stack)
 
 
 /******************************************************************************************************************************************
- * Function : getCardHolderName()
+ * Function : push()
  *//**
  * Description:
  *
@@ -133,7 +133,7 @@ void deleteStack(ST_stack_t *stack)
   }
 
   /************************************************************************************************************
-   * Function : getCardHolderName()
+   * Function : printStack()
    *//**
    * Description:
    *  This function takes a reference to the stack
@@ -169,7 +169,7 @@ void deleteStack(ST_stack_t *stack)
   }
 
   /************************************************************************************************************
-   * Function : getCardHolderName()
+   * Function : getStackTop()
    *//**
    * Description:
    * - This function takes a reference to the stack
