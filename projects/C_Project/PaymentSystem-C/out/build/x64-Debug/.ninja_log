@@ -1,0 +1,7 @@
+# ninja log v5
+17	135	7021048141364967	CMakeFiles/PaymentSystem.dir/Server/server.c.obj	d07a63a166772553
+13	136	7021048141369963	CMakeFiles/PaymentSystem.dir/Card/card.c.obj	7a8768ba883e36b9
+20	139	7021048141440434	CMakeFiles/PaymentSystem.dir/Terminal/terminal.c.obj	b28b8c86b8f61d42
+24	139	7021048141462558	CMakeFiles/PaymentSystem.dir/Test/test.c.obj	3c7e71697e011266
+7	86	7021073247135751	CMakeFiles/PaymentSystem.dir/Console/console.c.obj	462b39a24036b672
+3	88	7021073247168592	CMakeFiles/PaymentSystem.dir/Application/app.c.obj	ece3037ba8599f9d

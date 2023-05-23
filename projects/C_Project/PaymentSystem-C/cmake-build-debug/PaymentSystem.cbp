@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="PaymentSystem"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="C:/Users/Mahmoud/Desktop/Projects/Sprint_2/ATM/PaymentSystem-C/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Mahmoud/Desktop/Projects/Sprint_2/ATM/PaymentSystem-C/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Mahmoud/Desktop/Projects/Sprint_2/ATM/PaymentSystem-C/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Mahmoud/Desktop/Projects/Sprint_2/ATM/PaymentSystem-C/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Mahmoud/Desktop/Projects/Sprint_2/ATM/PaymentSystem-C/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="PaymentSystem">
+				<Option output="C:/Users/Mahmoud/Desktop/Projects/Sprint_2/ATM/PaymentSystem-C/cmake-build-debug/PaymentSystem.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Mahmoud/Desktop/Projects/Sprint_2/ATM/PaymentSystem-C/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Users/Mahmoud/Desktop/Projects/Sprint_2/ATM/PaymentSystem-C/Application"/>
+					<Add directory="C:/Users/Mahmoud/Desktop/Projects/Sprint_2/ATM/PaymentSystem-C/Card"/>
+					<Add directory="C:/Users/Mahmoud/Desktop/Projects/Sprint_2/ATM/PaymentSystem-C/Server"/>
+					<Add directory="C:/Users/Mahmoud/Desktop/Projects/Sprint_2/ATM/PaymentSystem-C/Terminal"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2023.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2023.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2023.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2023.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/include"/>
+					<Add directory="/mingw/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Mahmoud/Desktop/Projects/Sprint_2/ATM/PaymentSystem-C/cmake-build-debug/Makefile&quot;  VERBOSE=1 PaymentSystem"/>
+					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Mahmoud/Desktop/Projects/Sprint_2/ATM/PaymentSystem-C/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Mahmoud/Desktop/Projects/Sprint_2/ATM/PaymentSystem-C/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Mahmoud/Desktop/Projects/Sprint_2/ATM/PaymentSystem-C/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="PaymentSystem/fast">
+				<Option output="C:/Users/Mahmoud/Desktop/Projects/Sprint_2/ATM/PaymentSystem-C/cmake-build-debug/PaymentSystem.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Mahmoud/Desktop/Projects/Sprint_2/ATM/PaymentSystem-C/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Users/Mahmoud/Desktop/Projects/Sprint_2/ATM/PaymentSystem-C/Application"/>
+					<Add directory="C:/Users/Mahmoud/Desktop/Projects/Sprint_2/ATM/PaymentSystem-C/Card"/>
+					<Add directory="C:/Users/Mahmoud/Desktop/Projects/Sprint_2/ATM/PaymentSystem-C/Server"/>
+					<Add directory="C:/Users/Mahmoud/Desktop/Projects/Sprint_2/ATM/PaymentSystem-C/Terminal"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2023.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2023.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2023.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2023.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/include"/>
+					<Add directory="/mingw/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Mahmoud/Desktop/Projects/Sprint_2/ATM/PaymentSystem-C/cmake-build-debug/Makefile&quot;  VERBOSE=1 PaymentSystem/fast"/>
+					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Mahmoud/Desktop/Projects/Sprint_2/ATM/PaymentSystem-C/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Mahmoud/Desktop/Projects/Sprint_2/ATM/PaymentSystem-C/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Mahmoud/Desktop/Projects/Sprint_2/ATM/PaymentSystem-C/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="C:/Users/Mahmoud/Desktop/Projects/Sprint_2/ATM/PaymentSystem-C/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Mahmoud/Desktop/Projects/Sprint_2/ATM/PaymentSystem-C/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Mahmoud/Desktop/Projects/Sprint_2/ATM/PaymentSystem-C/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Mahmoud/Desktop/Projects/Sprint_2/ATM/PaymentSystem-C/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Mahmoud/Desktop/Projects/Sprint_2/ATM/PaymentSystem-C/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="C:/Users/Mahmoud/Desktop/Projects/Sprint_2/ATM/PaymentSystem-C/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Mahmoud/Desktop/Projects/Sprint_2/ATM/PaymentSystem-C/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Mahmoud/Desktop/Projects/Sprint_2/ATM/PaymentSystem-C/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Mahmoud/Desktop/Projects/Sprint_2/ATM/PaymentSystem-C/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Mahmoud/Desktop/Projects/Sprint_2/ATM/PaymentSystem-C/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="C:/Users/Mahmoud/Desktop/Projects/Sprint_2/ATM/PaymentSystem-C/Application/app.c">
+			<Option target="PaymentSystem"/>
+		</Unit>
+		<Unit filename="C:/Users/Mahmoud/Desktop/Projects/Sprint_2/ATM/PaymentSystem-C/Application/app.h">
+			<Option target="PaymentSystem"/>
+		</Unit>
+		<Unit filename="C:/Users/Mahmoud/Desktop/Projects/Sprint_2/ATM/PaymentSystem-C/Card/card.c">
+			<Option target="PaymentSystem"/>
+		</Unit>
+		<Unit filename="C:/Users/Mahmoud/Desktop/Projects/Sprint_2/ATM/PaymentSystem-C/Card/card.h">
+			<Option target="PaymentSystem"/>
+		</Unit>
+		<Unit filename="C:/Users/Mahmoud/Desktop/Projects/Sprint_2/ATM/PaymentSystem-C/Console/console.c">
+			<Option target="PaymentSystem"/>
+		</Unit>
+		<Unit filename="C:/Users/Mahmoud/Desktop/Projects/Sprint_2/ATM/PaymentSystem-C/Console/console.h">
+			<Option target="PaymentSystem"/>
+		</Unit>
+		<Unit filename="C:/Users/Mahmoud/Desktop/Projects/Sprint_2/ATM/PaymentSystem-C/Server/server.c">
+			<Option target="PaymentSystem"/>
+		</Unit>
+		<Unit filename="C:/Users/Mahmoud/Desktop/Projects/Sprint_2/ATM/PaymentSystem-C/Server/server.h">
+			<Option target="PaymentSystem"/>
+		</Unit>
+		<Unit filename="C:/Users/Mahmoud/Desktop/Projects/Sprint_2/ATM/PaymentSystem-C/Terminal/terminal.c">
+			<Option target="PaymentSystem"/>
+		</Unit>
+		<Unit filename="C:/Users/Mahmoud/Desktop/Projects/Sprint_2/ATM/PaymentSystem-C/Terminal/terminal.h">
+			<Option target="PaymentSystem"/>
+		</Unit>
+		<Unit filename="C:/Users/Mahmoud/Desktop/Projects/Sprint_2/ATM/PaymentSystem-C/Test/test.c">
+			<Option target="PaymentSystem"/>
+		</Unit>
+		<Unit filename="C:/Users/Mahmoud/Desktop/Projects/Sprint_2/ATM/PaymentSystem-C/Test/test.h">
+			<Option target="PaymentSystem"/>
+		</Unit>
+		<Unit filename="C:/Users/Mahmoud/Desktop/Projects/Sprint_2/ATM/PaymentSystem-C/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
