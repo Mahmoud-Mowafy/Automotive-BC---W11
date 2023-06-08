@@ -45,148 +45,159 @@ EN_appError_t App_start(void)
 
 EN_appError_t executeBlinking(void)
 {
-	switch(pressCounter)
-	{
-		case 1:
-	LED_on(0, PORT_A);
-	timer_stop();
-	timer_delay(onTime);
-	while(  g_tick != OVFs );
-	g_tick=0;
-	LEDs_off(4, PORT_A);
-	timer_stop();
-	timer_delay(onTime);
-	while(  g_tick != OVFs );
-	g_tick=0;	
-	break;
-		case 2:
-		LED_on(0, PORT_A);
-		LED_on(1, PORT_A);
-		timer_stop();
-		timer_delay( onTime);
-		while(  g_tick != OVFs );
-		g_tick=0;
-		LEDs_off(4, PORT_A);
-		timer_stop();
-		timer_delay( offTime);
-		while(  g_tick != OVFs );
-		g_tick=0;
-		break;
-		
-		case 3:
-		LED_on(0, PORT_A);
-		LED_on(1, PORT_A);
-		LED_on(2, PORT_A);
-		timer_stop();
-		timer_delay( onTime);
-		while(  g_tick != OVFs );
-		g_tick=0;
-		LEDs_off(4, PORT_A);
-		timer_stop();
-		timer_delay( offTime);
-		while(  g_tick != OVFs );
-		g_tick=0;
-		break;
-		
-		case 4:
-		LED_on(0, PORT_A);
-		LED_on(1, PORT_A);
-		LED_on(2, PORT_A);
-		LED_on(3, PORT_A);
-		timer_stop();
-		timer_delay( onTime);
-		while(  g_tick != OVFs );
-		g_tick=0;
-		LEDs_off(4, PORT_A);
-		timer_stop();
-		timer_delay( offTime);
-		while(  g_tick != OVFs );
-		g_tick=0;
-		break;
 
-		case 5:
-		LED_on(1, PORT_A);
-		LED_on(2, PORT_A);
-		LED_on(3, PORT_A);
-		timer_stop();
-		timer_delay( onTime);
-		while(  g_tick != OVFs );
-		g_tick=0;
-		LEDs_off(4, PORT_A);
-		timer_stop();
-		timer_delay( offTime);
-		while(  g_tick != OVFs );
-		g_tick=0;
-		break;
+		if(pressCounter == 1)
+		{
+			LED_on(0, PORT_A);
+			timer_stop();
+			timer_delay(onTime);
+			while(  g_tick != OVFs );
+			g_tick=0;
+			LEDs_off(4, PORT_A);
+			timer_stop();
+			timer_delay(onTime);
+			while(  g_tick != OVFs );
+			g_tick=0;
+		}
+
+		else if(pressCounter == 2)
+		{
+			LED_on(0, PORT_A);
+			LED_on(1, PORT_A);
+			timer_stop();
+			timer_delay( onTime);
+			while(  g_tick != OVFs );
+			g_tick=0;
+			LEDs_off(4, PORT_A);
+			timer_stop();
+			timer_delay( offTime);
+			while(  g_tick != OVFs );
+			g_tick=0;
+		}
 		
-		case 6:
-		LED_on(2, PORT_A);
-		LED_on(3, PORT_A);
-		timer_stop();
-		timer_delay( onTime);
-		while(  g_tick != OVFs );
-		g_tick=0;
-		LEDs_off(4, PORT_A);
-		timer_stop();
-		timer_delay( offTime);
-		while(  g_tick != OVFs );
-		g_tick=0;
-		break;
+		else if(pressCounter == 3)
+		{
+			LED_on(0, PORT_A);
+			LED_on(1, PORT_A);
+			LED_on(2, PORT_A);
+			timer_stop();
+			timer_delay( onTime);
+			while(  g_tick != OVFs );
+			g_tick=0;
+			LEDs_off(4, PORT_A);
+			timer_stop();
+			timer_delay( offTime);
+			while(  g_tick != OVFs );
+			g_tick=0;
+		}
 		
-		case 7:
-		LED_on(3, PORT_A);
-		timer_stop();
-		timer_delay( onTime);
-		while(  g_tick != OVFs );
-		g_tick=0;
-		LEDs_off(4, PORT_A);
-		timer_stop();
-		timer_delay(offTime);
-		while(  g_tick != OVFs );
-		g_tick=0;
-		break;
+		else if(pressCounter == 4)
+		{
+			LED_on(0, PORT_A);
+			LED_on(1, PORT_A);
+			LED_on(2, PORT_A);
+			LED_on(3, PORT_A);
+			timer_stop();
+			timer_delay( onTime);
+			while(  g_tick != OVFs );
+			g_tick=0;
+			LEDs_off(4, PORT_A);
+			timer_stop();
+			timer_delay( offTime);
+			while(  g_tick != OVFs );
+			g_tick=0;
+		}
+
+		else if(pressCounter == 5)
+		{
+			LED_on(1, PORT_A);
+			LED_on(2, PORT_A);
+			LED_on(3, PORT_A);
+			timer_stop();
+			timer_delay( onTime);
+			while(  g_tick != OVFs );
+			g_tick=0;
+			LEDs_off(4, PORT_A);
+			timer_stop();
+			timer_delay( offTime);
+			while(  g_tick != OVFs );
+			g_tick=0;
+		}
 		
-		case 8:
-		LEDs_off(4, PORT_A);
-		timer_stop();
-		timer_delay( offTime);
-		while(  g_tick != OVFs );
-		g_tick=0;
-		pressCounter = 0;
-		break;
-	}	
+		else if(pressCounter == 6)
+		{
+			LED_on(2, PORT_A);
+			LED_on(3, PORT_A);
+			timer_stop();
+			timer_delay( onTime);
+			while(  g_tick != OVFs );
+			g_tick=0;
+			LEDs_off(4, PORT_A);
+			timer_stop();
+			timer_delay( offTime);
+			while(  g_tick != OVFs );
+			g_tick=0;
+		}
+		
+		else if(pressCounter == 7)
+		{
+			LED_on(3, PORT_A);
+			timer_stop();
+			timer_delay( onTime);
+			while(  g_tick != OVFs );
+			g_tick=0;
+			LEDs_off(4, PORT_A);
+			timer_stop();
+			timer_delay(offTime);
+			while(  g_tick != OVFs );
+			g_tick=0;
+		}
+		
+		else if(pressCounter == 8)
+		{
+			LEDs_off(4, PORT_A);
+			timer_stop();
+			timer_delay( offTime);
+			while(  g_tick != OVFs );
+			g_tick=0;
+			pressCounter = 0;
+		}	
 	return APP_OK;
 }
 
 ISR( EXT_INT0 )
 {
 	BlinkMode++;
-	switch(BlinkMode)
-	{
-		case 1:
-		onTime = 100.0f;
-		offTime = 900.0f;
-		break;
-		case 2:
-		onTime = 200.0f;
-		offTime = 800.0f;
-		break;
-		case 3:
-		onTime = 300.0f;
-		offTime = 700.0f;
-		break;
-		case 4:
-		onTime = 500;
-		offTime = 500;
-		break;
-		case 5:
-		onTime = 800;
-		offTime = 200;
-		break;
-		default:
-		BlinkMode=0;
-		break;
-	}
+		if(BlinkMode == 1)
+		{
+			onTime = 100.0f;
+			offTime = 900.0f;
+		}
+		else if (BlinkMode == 2)
+		{
+			onTime = 200.0f;
+			offTime = 800.0f;
+		}
+		else if (BlinkMode == 3)
+		{
+			onTime = 300.0f;
+			offTime = 700.0f;			
+		}
+		else if (BlinkMode == 4)
+		{
+			onTime = 500;
+			offTime = 500;			
+		}
+	   else if (BlinkMode == 5)
+	   {
+			onTime = 800;
+			offTime = 200;
+	   }
+	   else
+		{
+			BlinkMode=0;	
+		}
+
 }
 
 ISR( EXT_INT1 )

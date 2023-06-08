@@ -18,11 +18,8 @@ int Dio_init(uint8_t pinNumber, uint8_t portNumber, uint8_t pinDirection)
 	{
 		retVal = (int)  WRONG_PIN;
 	}
-	else
+    if( portNumber == 'A' )
 	{
-		switch(portNumber)
-		{
-			case 'A':
 			if(pinDirection == INPUT)
 			{
 				CLEARE_BIT(DDRA, pinNumber);
@@ -32,10 +29,10 @@ int Dio_init(uint8_t pinNumber, uint8_t portNumber, uint8_t pinDirection)
 				SET_BIT(DDRA, pinNumber);
 			}
 			else
-				retVal = (int)  WRONG_DIR;
-			break;
-		
-			case 'B':
+				retVal = (int)  WRONG_DIR;		
+	}
+	else if( portNumber == 'B' )
+	{
 			if(pinDirection == INPUT)
 			{
 				CLEARE_BIT(DDRB, pinNumber);
@@ -45,10 +42,10 @@ int Dio_init(uint8_t pinNumber, uint8_t portNumber, uint8_t pinDirection)
 				SET_BIT(DDRB, pinNumber);
 			}
 			else
-				retVal = (int)  WRONG_DIR;
-			break;
-		
-			case 'C':
+			retVal = (int)  WRONG_DIR;		
+	}
+	else if( portNumber == 'C' )
+	{
 			if(pinDirection == INPUT)
 			{
 				CLEARE_BIT(DDRC, pinNumber);
@@ -58,10 +55,10 @@ int Dio_init(uint8_t pinNumber, uint8_t portNumber, uint8_t pinDirection)
 				SET_BIT(DDRC, pinNumber);
 			}
 			else
-				retVal = (int)  WRONG_DIR;
-			break;
-		
-			case 'D':
+			retVal = (int)  WRONG_DIR;		
+	}
+	else if( portNumber == 'D' )
+	{
 			if(pinDirection == INPUT)
 			{
 				CLEARE_BIT(DDRD, pinNumber);
@@ -71,13 +68,11 @@ int Dio_init(uint8_t pinNumber, uint8_t portNumber, uint8_t pinDirection)
 				SET_BIT(DDRD, pinNumber);
 			}
 			else
-				retVal = (int)  WRONG_DIR;
-			break;
-		
-			default:
-				retVal = (int) WRONG_PORT;
-		}
-		
+			retVal = (int)  WRONG_DIR;		
+	}
+	else 
+	{
+		retVal = (int) WRONG_PORT;
 	}
 	return retVal;
 }
@@ -91,9 +86,9 @@ int Dio_write(uint8_t pinNumber, uint8_t portNumber, uint8_t value)
 	}
 	else
 	{
-		switch(portNumber)
-		{
-			case 'A':
+
+			if(portNumber == 'A') 
+			{
 				if( value == LOW)
 				{
 					CLEARE_BIT(PORTA, pinNumber); // write 0 
@@ -104,9 +99,10 @@ int Dio_write(uint8_t pinNumber, uint8_t portNumber, uint8_t value)
 				}
 				else 
 					retVal = (int) WRONG_VAL;
-			break;
+			}
 		
-			case 'B':
+			else if(portNumber == 'B')
+			{
 				if( value == LOW)
 				{
 					CLEARE_BIT(PORTB, pinNumber); // write 0 
@@ -117,9 +113,10 @@ int Dio_write(uint8_t pinNumber, uint8_t portNumber, uint8_t value)
 				}
 				else
 					retVal = (int) WRONG_VAL;
-			break;
+			}
 		
-			case 'C':
+			else if(portNumber == 'C')
+			{
 				if( value == LOW)
 				{
 					CLEARE_BIT(PORTC, pinNumber); // write 0 
@@ -130,9 +127,10 @@ int Dio_write(uint8_t pinNumber, uint8_t portNumber, uint8_t value)
 				}
 				else
 					retVal = (int) WRONG_VAL;
-			break;
+			}
 		
-			case 'D':
+			else if(portNumber == 'D')
+			{
 				if( value == LOW)
 				{
 					CLEARE_BIT(PORTD, pinNumber); // write 0  
@@ -143,11 +141,11 @@ int Dio_write(uint8_t pinNumber, uint8_t portNumber, uint8_t value)
 				}
 				else
 					retVal = (int) WRONG_VAL;
-			break;
-		
-			default:
-				retVal = (int) WRONG_PORT;
-		}
+			}
+			else
+			{
+				retVal = (int) WRONG_PORT;	
+			}
 		
 	}
 	return retVal;
@@ -162,28 +160,26 @@ int Dio_toggle(uint8_t pinNumber, uint8_t portNumber)
 	}
 	else
 	{
-		switch(portNumber)
+		if(portNumber == 'A')
 		{
-			case 'A':
-				TOGGLE_BIT( PORTA, pinNumber);
-			break;
-		
-			case 'B':
-				TOGGLE_BIT( PORTB, pinNumber);
-			break;
-		
-			case 'C':
-				TOGGLE_BIT( PORTC, pinNumber);
-			break;
-		
-			case 'D':
-				TOGGLE_BIT( PORTD, pinNumber);
-			break;
-		
-			default:
-				retVal = (int) WRONG_PORT;
+			TOGGLE_BIT( PORTA, pinNumber);
 		}
-			
+		else if(portNumber == 'B')
+		{
+			TOGGLE_BIT( PORTB, pinNumber);
+		}
+		else if(portNumber == 'C')
+		{
+			TOGGLE_BIT( PORTC, pinNumber);
+		}
+		else if(portNumber == 'D')
+		{
+			TOGGLE_BIT( PORTD, pinNumber);
+		}
+		else
+		{
+			retVal = (int) WRONG_PORT;
+		}		
 	}
 	return retVal;
 }
@@ -194,32 +190,30 @@ int Dio_read(uint8_t pinNumber, uint8_t portNumber, uint8_t *value)
 	if( ( pinNumber >= PORTWIDTH )  )
 	{
 		retVal = (int) WRONG_PIN;
-	}
+	}	
 	else
 	{
-		switch(portNumber)
+		if(portNumber == 'A')
 		{
-			case 'A' :
-				*value = IS_SET( PINA, pinNumber);
-			break;
-		
-			case 'B':
-				*value = IS_SET( PINB, pinNumber);
-			break;
-		
-			case 'C':
-				*value = IS_SET( PINC, pinNumber);
-			break;
-		
-			case 'D':
-				*value = IS_SET( PIND, pinNumber);
-			break;
-		
-			default:
-				retVal = (int) WRONG_PORT;
+			*value = IS_SET( PINA, pinNumber);
 		}
-		
-	}
+		else if(portNumber == 'B')
+		{
+			*value = IS_SET( PINB, pinNumber);
+		}
+		else if(portNumber == 'C')
+		{
+			*value = IS_SET( PINC, pinNumber);
+		}
+		else if(portNumber == 'D')
+		{
+			*value = IS_SET( PIND, pinNumber);
+		}
+		else
+		{
+			retVal = (int) WRONG_PORT;
+		}
+	}	
 	return retVal;
 }
 

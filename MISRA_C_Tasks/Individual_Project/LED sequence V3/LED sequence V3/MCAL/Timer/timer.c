@@ -47,38 +47,41 @@ void timer_delay(double interval)
 
 void timer_start(uint16_t prescaler)
 {
-	switch(prescaler)
+	if(prescaler == 1)
 	{
-		case 1:
 		TCCR0 &=~(1<<CS01);
 		TCCR0 &=~(1<<CS02);
-		TCCR0 |=(1<<CS00);
-		break;
-		case 8 :
-		TCCR0 &=~(1<<CS00); 
+		TCCR0 |=(1<<CS00);		
+	}
+	else if(prescaler == 8)
+	{
+		TCCR0 &=~(1<<CS00);
+		TCCR0 &=~(1<<CS02);
+		TCCR0 |=(1<<CS01);		
+	}
+	else if(prescaler == 64)
+	{
 		TCCR0 &=~(1<<CS02);
 		TCCR0 |=(1<<CS01);
-		break;
-		case 64 :
-		TCCR0 &=~(1<<CS02);
-		TCCR0 |=(1<<CS01);
-		TCCR0 |=(1<<CS00);
-		break;
-		case 256 :
+		TCCR0 |=(1<<CS00);		
+	}
+	else if(prescaler == 256)
+	{
 		TCCR0 &=~(1<<CS00);
 		TCCR0 &=~(1<<CS01);
-		TCCR0 |=(1<<CS02);
-		break;
-		case 1024 :
+		TCCR0 |=(1<<CS02);		
+	}
+	else if(prescaler == 1024)
+	{
 		TCCR0 &=~(1<<CS01);
 		TCCR0 |=(1<<CS00);
-		TCCR0 |=(1<<CS02);
-		break;
-		default:
+		TCCR0 |=(1<<CS02);		
+	}
+	else
+	{
 		TCCR0 &=~(1<<CS01);
 		TCCR0 &=~(1<<CS02);
 		TCCR0 |=(1<<CS00);
-		break;
 	}
 }
 
